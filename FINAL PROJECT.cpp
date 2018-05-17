@@ -132,8 +132,8 @@ system("PAUSE");
 Peminjam();
 }
 int tgl_k(int *t) {
-	for(int i=0; i<4; i++) {
-        *t++;
+	for(int i=0; i<3; i++) {
+        *t=+1;
     }
 }
 void result(){
@@ -144,7 +144,8 @@ void result(){
     cout<<"\tJudul Buku\t= " << judul_buku << endl;
     if (tgl_p>=1 && tgl_p<=25 && bln_p>=1 &&  bln_p<=12) {
      cout << "\tTanggal Pinjam\t= " << tgl_p << "-" << bln_p << "-2018\n";
-     cout << "\tTanggal Kembali\t= " << tgl_k(&tgl_p) << "-" << bln_p << "-2018\n"; //"tgl_p+3 << "-" << bln_p << "-2018\n"";
+	tgl_k(&tgl_p);
+     cout << "\tTanggal Kembali\t= " << tgl_p << "-" << bln_p << "-2018\n"; //"tgl_p+3 << "-" << bln_p << "-2018\n"";
      system("pause");
      login();
     }
